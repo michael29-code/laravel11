@@ -4,11 +4,12 @@
     <article class="py-8 max-w-screen-md ">
         <h2 class="mb-1 text-3xl tracking-tight font-bold text-gray-900">{{ $post['title'] }}</h2>
         <div class="text-base text-gray-500">
-            <a href="{{ $post['id'] }}" class="hover:underline">{{ $post['author'] }}</a> | 5 Mei 2024
+            <a href="{{ $post['id'] }}" class="hover:underline">{{ $post['author'] }}</a> |
+            {{ $post->created_at->format('j F Y') }}
         </div>
 
         <p class="my-4 font-light">
-            {{ $post['Body'], 150 }}</p>
+            {{ $post['body'], 150 }}</p>
         <a href="/posts" class="font-meidum text-blue-500 hover:underline">&laquo Back to posts</a>
     </article>
 
